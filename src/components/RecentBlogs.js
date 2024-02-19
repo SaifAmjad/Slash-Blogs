@@ -17,7 +17,6 @@ const RecentBlogs = () => {
     console.log('more')
     try {
       const newBlogs = await getAllBlogs(page + 1);
-      console.log(newBlogs)
       setPage(page + 1);
       if(Array.isArray(newBlogs)){
         setAllBlogs((oldBlogs) => [...oldBlogs, ...newBlogs]);
@@ -84,9 +83,9 @@ const RecentBlogs = () => {
         </InfiniteScroll>
       </div>
 
-      {/* <div className="row custom-footer-page">
+      <div className="row custom-footer-page">
         <Footer />
-      </div> */}
+      </div>
     </div>
   );
 };

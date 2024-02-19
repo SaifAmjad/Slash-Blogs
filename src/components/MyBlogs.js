@@ -21,7 +21,6 @@ const MyBlogs = () => {
 
 
   const cookie=Cookies.get('authToken')
-  console.log(cookie);
   
 
   const deleteClick=async(id)=>{
@@ -50,14 +49,12 @@ const MyBlogs = () => {
     const fetchData=async()=>{
       try {
         const newBlogs=await myBlogs();
-        console.log(newBlogs);
         if(newBlogs.success){
           setLoading(false);
         }
         if(mounted){
           setFetchBlogs(newBlogs.blog);
         }
-        console.log(newBlogs);
       } catch (error) {
         console.log(error);
       }

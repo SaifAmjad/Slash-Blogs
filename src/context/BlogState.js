@@ -4,7 +4,7 @@ import BlogContext from './BlogContext'
 
 
 const BlogState = (props) => {
-    const host='http://localhost:5000';
+    const host='https://slash.fly.dev'
     const[blogs,setBlogs]=useState([]);
     const[totalBlogs,setTotalBlogs]=useState();
     const[success,setSuccess]=useState(false); 
@@ -13,7 +13,7 @@ const BlogState = (props) => {
     const getAllBlogs=async(page)=>{
         try {
             const res=await fetch(`${host}/api/v1/blogs?page=${page}`);
-            const data=await res.json();
+            const data=await res.json(); 
             setBlogs(data.blog)
             setTotalBlogs(data.blogCount);
             if(data.success){

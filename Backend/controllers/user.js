@@ -109,7 +109,7 @@ const setCookie=asyncHandler(async(req,res)=>{
 
     const token=await findUser.genToken(findUser.name,email);
 
-    res.cookie('authToken',token,{httpOnly:false});
+    res.cookie('authToken',token,{httpOnly:false,sameSite: 'none',secure: true});
     res.status(StatusCodes.OK).json({msg:"successfully authenticated",success:true});
 
 })

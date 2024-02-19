@@ -4,6 +4,7 @@ import Cookies from "js-cookie";
 
 const NavBar = ({setHide}) => {
     const cookie=Cookies.get('authToken');
+
     const navigate=useNavigate();
 
     const logout=()=>{

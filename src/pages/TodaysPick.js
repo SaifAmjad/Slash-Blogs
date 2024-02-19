@@ -19,7 +19,6 @@ const TodaysPick = () => {
         if(mounted){
           setBlog(newBlog.blog)
         }
-        console.log(newBlog);
       } catch (error) {
         console.log(error)
       }

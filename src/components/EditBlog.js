@@ -61,7 +61,6 @@ const EditBlog = () => {
       const formData = new FormData();
       formData.append("img", imgRef.current.files[0]);
       const imgUrl = await insertImage(formData);
-      console.log(imgUrl.url);
       if (imgUrl.success) {
         
         setImg(()=>imgUrl.url);

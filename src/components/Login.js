@@ -144,7 +144,7 @@ function Login({ setHide }) {
           setHide(false);
           navigate("/");
         } else {
-          console.log(dataValue);
+  
           alert(dataValue.msg);
         }
       } else {
@@ -288,7 +288,6 @@ function Login({ setHide }) {
           }));
           singupRef.current.click();
         } else {
-          console.log(userData);
           alert(userData.msg);
         }
       }
@@ -426,7 +425,7 @@ function Login({ setHide }) {
                     <GoogleLogin
                       onSuccess={onSuccessLogin}
                       onError={() => {
-                        console.log("Login Failed");
+                        alert("Login Failed");
                       }}
                     />
                   </div>
@@ -500,7 +499,7 @@ function Login({ setHide }) {
                     <GoogleLogin
                       onSuccess={onSuccessSignup}
                       onError={() => {
-                        console.log("Login Failed");
+                        alert("Login Failed");
                       }}
                     />
                   </div>
