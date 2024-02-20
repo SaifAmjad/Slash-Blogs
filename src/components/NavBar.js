@@ -3,7 +3,7 @@ import {Link, useNavigate} from "react-router-dom";
 import Cookies from "js-cookie"; 
 
 const NavBar = ({setHide}) => {
-    const cookie=Cookies.get('authToken', { path: '/' });
+    const cookie=Cookies.get('authToken');
 
     const navigate=useNavigate();
 
