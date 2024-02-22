@@ -10,7 +10,7 @@ const NavBar = ({setHide}) => {
     const logout=()=>{
         const confirm=window.confirm('Are you sure to logOut');
         if(confirm){
-            Cookies.remove('authToken');
+            Cookies.remove('token');
             navigate('/');
         }   
     }
