@@ -20,7 +20,7 @@ const MyBlogs = () => {
   const navigate=useNavigate();
 
 
-  const cookie=Cookies.get('authToken')
+  const cookie=Cookies.get('token')
   
 
   const deleteClick=async(id)=>{
