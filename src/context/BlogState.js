@@ -115,6 +115,9 @@ const BlogState = (props) => {
             const res=await fetch(`${host}/api/v1/blogs/${id}`,{
                 method: "DELETE", 
                 credentials: 'include',
+                 headers: {
+                  "Authorization": token
+                },
                 mode: "cors", 
             });
             const data=await res.json();
