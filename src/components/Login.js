@@ -141,6 +141,7 @@ function Login({ setHide }) {
         const dataValue = await value.json();
 
         if (dataValue.success) {
+          Cookies.set('token',dataValue.token);
           closeRef.current.click();
           setHide(false);
           navigate("/");
