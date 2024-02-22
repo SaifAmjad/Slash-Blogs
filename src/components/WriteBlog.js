@@ -17,7 +17,7 @@ const WriteBlog = () => {
   const [category, setCategory] = useState("");
   const [timeout, setTimeOut] = useState(false);
 
-  const cookie=Cookies.get('authToken');
+  const cookie=Cookies.get('token');
 
   const navigate=useNavigate();
 
