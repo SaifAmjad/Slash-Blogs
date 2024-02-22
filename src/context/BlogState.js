@@ -75,7 +75,8 @@ const BlogState = (props) => {
         try {
             const res=await fetch(`${host}/api/v1/blogs/myblogs`,{
               mode: "cors", 
-              credentials: 'include'
+              credentials: 'include',
+              body: JSON.stringify({token})
             });
             const data=await res.json();
             console.log(data)
