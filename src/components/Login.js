@@ -14,6 +14,7 @@ import {
 } from "mdb-react-ui-kit";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
+import Cookies from "js-cookie"; 
 
 function Login({ setHide }) {
   const tab = useParams();
