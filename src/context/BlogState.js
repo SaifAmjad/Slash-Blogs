@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import BlogContext from './BlogContext'
-
+import Cookies from "js-cookie";    
 
 
 const BlogState = (props) => {
@@ -8,6 +8,8 @@ const BlogState = (props) => {
     const[blogs,setBlogs]=useState([]);
     const[totalBlogs,setTotalBlogs]=useState();
     const[success,setSuccess]=useState(false); 
+
+     const token=Cookies.get('token');
    
 
     const getAllBlogs=async(page)=>{
