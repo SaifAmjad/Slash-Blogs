@@ -51,6 +51,7 @@ const BlogState = (props) => {
                 credentials: 'include',
                 headers: {
                   "Content-Type": "application/json",
+                  "Authorization": token
                 },
                 body: JSON.stringify({title,imgURL,paragragh,category}), 
               });
@@ -98,6 +99,7 @@ const BlogState = (props) => {
                 credentials: 'include',
                 headers: {
                   "Content-Type": "application/json",
+                  "Authorization": token
                 },
                 body: JSON.stringify({title,imgURL,paragragh,category}),   
             });
