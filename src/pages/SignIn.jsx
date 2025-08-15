@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PrimaryButton from "../components/UI/PrimaryButton";
-import LoginUI from "../components/SignIn/loginUI";
+import LoginUI from "../components/SignIn/LoginUI";
 import OTPLogin from "../components/SignIn/OTPLogin";
 import { useNavigate } from "react-router-dom";
 import PrimaryAlert from "../components/UI/PrimaryAlert";
