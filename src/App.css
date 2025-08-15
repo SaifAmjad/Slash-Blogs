@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@plugin '../hero.ts';
+/* Note: You may need to change the path to fit your project structure */
+@source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+/* @custom-variant dark (&:is(.dark *)); */
+
+.just-another-hand-regular {
+  font-family: "Just Another Hand", cursive;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.just-another-hand-light {
+  font-family: "Just Another Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gochi-hand-regular {
+  font-family: "Gochi Hand", cursive;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.ql-container {
+  border: none !important;
+}
+
+.ql-toolbar {
+  border-top: none !important;
+  border-left: none !important;
+   border-right: none !important;
+   border: none !important;
+}
+
+
+.ql-editor::before {
+      color: #9ca3af !important; /* Tailwind's text-gray-400 */
+      font-weight: 400;
+    }
+
+.ql-editor {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
