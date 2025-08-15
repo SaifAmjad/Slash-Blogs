@@ -3,11 +3,14 @@ import PrimaryButton from "../UI/PrimaryButton";
 import { Link } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
 
-const LoginUI = ({ login, loader, onChangeLogin, LogInHandler,onSuccessLogin,disable }) => {
-
-
-
-
+const LoginUI = ({
+  login,
+  loader,
+  onChangeLogin,
+  LogInHandler,
+  onSuccessLogin,
+  disable,
+}) => {
   return (
     <>
       <section class="bg-white dark:bg-gray-900">
@@ -82,7 +85,8 @@ const LoginUI = ({ login, loader, onChangeLogin, LogInHandler,onSuccessLogin,dis
             <div class="mt-6">
               <PrimaryButton
                 disabled={
-                  ((login.email.length > 0 && login.password.length > 0) || (!disable))
+                  (login.email.length > 0 && login.password.length > 0) ||
+                  !disable
                     ? false
                     : true
                 }
@@ -94,15 +98,17 @@ const LoginUI = ({ login, loader, onChangeLogin, LogInHandler,onSuccessLogin,dis
               </PrimaryButton>
 
               <p class="mt-4 mb-4 text-center text-gray-600 dark:text-gray-400">
-                or 
+                or
               </p>
 
-              <GoogleLogin
-                onSuccess={onSuccessLogin}
-                onError={() => {
-                  alert("Login Failed");
-                }}
-              />
+              <div className="flex w-full justify-center items-center">
+                <GoogleLogin
+                  onSuccess={onSuccessLogin}
+                  onError={() => {
+                    alert("Login Failed");
+                  }}
+                />
+              </div>
 
               <div class="mt-6 text-center ">
                 <Link
